@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     font-family: Inter, sans-serif;
     background: #23252C;
 }
@@ -8,22 +7,27 @@ body {
     margin: 44px auto;
     width: 317px;
     height: 780px;
+}
+
+.header--headshot {
+    display: block;
+}
+
+main {
+    padding-top: 21px;
+    height: 378px;
+    text-align: center;
     background: #1A1B21;
 }
 
-header {
-    text-align: center;
-}
-
-.header--name {
-    margin-top: 21px;
-    margin-bottom: 0;
+.main--name {
+    margin: 0;
     font-weight: 700;
     font-size: 25px;
     color: #FFFFFF;
 }
 
-.header--title {
+.main--title {
     margin-top: 2px;
     margin-bottom: 0;
     font-weight: 400;
@@ -31,7 +35,7 @@ header {
     color: #F3BF99;
 }
 
-.header--website {
+.main--website {
     margin-top: 9px;
     margin-bottom: 0;
     font-weight: 400;
@@ -39,18 +43,22 @@ header {
     color: #F5F5F5;
 }
 
-.header--buttons {
+.main--buttons {
     margin-top: 17px;
 }
 
-.header--buttons > button {
+.main--buttons > button {
     width: 115px;
-    padding: 7px 28px;
+    padding: 7px 0;
     font-family: 'Inter';
     font-weight: 500;
     font-size: 14px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
+}
+
+.icon {
+    padding-right: 9.6px;
 }
 
 #email-btn {
@@ -67,12 +75,13 @@ header {
     background: #5093E2;
 }
 
-main {
+.details {
+    text-align: left;
     margin: 33px auto;
     max-width: 247px;
 }
 
-main > h4 {
+.details > h4 {
     margin: 0;
     color: #F5F5F5;
 }
@@ -90,21 +99,36 @@ main > h4 {
 }
 
 footer {
-    margin-top: 37px;
     height: 64px;
     text-align: center;
     background: #161619;
+    border-radius: 0px 0px 10px 10px;
 }
 
 footer > button {
     margin-top: 19.5px;
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     border: none;
-    border-radius: 3px;
-    background: #918E9B;
+    background: none;
+    background-repeat: no-repeat;
 }
 
-.footer--button {
+.twitter--btn {
+    background-image: url("./images/twitter-icon.png");
+}
+
+.facebook--btn {
     margin-left: 24px;
+    background-image: url("./images/facebook-icon.png");
+}
+
+.instagram--btn {
+    margin-left: 24px;
+    background-image: url("./images/instagram-icon.png");
+}
+
+.github--btn {
+    margin-left: 24px;
+    background-image: url("./images/github-icon.png");
 }

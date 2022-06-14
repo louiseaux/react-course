@@ -4,9 +4,9 @@ export default function Footer() {
     return (
         <footer>
             <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button className="footer--button"></button>
+            <button className="footer--button"></button>
+            <button className="footer--button"></button>
         </footer>
     )
 }

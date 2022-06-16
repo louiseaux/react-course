@@ -6,10 +6,13 @@ import data from "./data"
 export default function App() {
     const cards = data.map(item => {
         return (
-            <Card
-                key={item.id}
-                {...item}
-            />
+            <div>
+                <Card
+                    key={item.id}
+                    {...item}
+                />
+                { item.id !== data.length && <hr className="card--div"/>}
+            </div>
         )
     })
     

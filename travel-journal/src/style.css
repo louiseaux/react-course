@@ -29,16 +29,24 @@ nav {
     margin-right: 7px;
 }
 
-.card {
+.cards-list {
+    margin: auto;
+    margin-bottom: 45px;
     width: 478px;
-    font-size: 12px;
+}
+
+.card {
+    margin: 18px 0;
     display: flex;
+    align-items: center;
     color: #2B283A;
+    font-size: 10px;
 }
 
 .card--image {
     width: 125px;
     height: 168px;
+    object-fit: cover;
     border-radius: 5px;
     margin-right: 19px;
 }
@@ -54,27 +62,36 @@ nav {
 }
 
 .card--location {
+    margin: 0;
     font-weight: 400;
     font-size: 10px;
     letter-spacing: 0.17em;
 }
 
+.card--link {
+    margin-left: 12px;
+    color: #918E9B;
+}
+
 .card--title {
+    margin-top: 5px;
+    margin-bottom: 18px;
     font-weight: 700;
     font-size: 25px;
 }
 
 .card--date {
+    margin: 0;
     font-weight: 700;
-    font-size: 10px;
 }
 
 .card--description {
+    margin-top: 7px;
+    margin-bottom: 0;
     font-weight: 400;
-    font-size: 10px;
     line-height: 150%;
 }
 
-hr {
-    border: 1px solid #F5F5F5;
+.card--div {
+    border: 0.5px solid #F5F5F5;
 }

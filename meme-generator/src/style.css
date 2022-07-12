@@ -9,6 +9,8 @@ body {
 
 main {
     padding: 36px;
+    max-width: fit-content;
+    margin: auto;
 }
 
 .header {

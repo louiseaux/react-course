@@ -1,22 +1,56 @@
-import { InferenceClient } from '@huggingface/inference'
+import Anthropic from "@anthropic-ai/sdk"
+import { InferenceClient } from "@huggingface/inference"
 
 const SYSTEM_PROMPT = `
     You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with
     some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can
     include additional ingredients they didn't mention, but try not to include too many extra ingredients. Format your
-    response in markdown to make it easier to render to a web page
+    response in markdown to make it easier to render to a web page as follows:
+    ## Recipe Title
+
+    ### Ingredients
+    - Ingredient 1
+    - Ingredient 2
+    - And so on...
+
+    ### Instructions
+    1. Example 1
+    2. Example 2
+    3. And so on...
 `
+
+/* const anthropic = new Anthropic({
+    apiKey: import.meta.env['VITE_ANTHROPIC_API_KEY'],
+    dangerouslyAllowBrowser: true    // Disabled by default, as it risks exposing secret API credentials to attackers.
+})
+
+export async function getRecipeFromChefClaude(ingredientsArr) {
+    const ingredientsStr = ingredientsArr.join(", ")
+
+    const message = await anthropic.messages.create({
+        model: "claude-3-haiku-20240307",
+        max_tokens: 1024,
+        system: SYSTEM_PROMPT,
+        messages: [
+            {
+                role: "user",
+                content: `I have ${ingredientsStr}. Please give me a recipe you'd recommend I make!`
+            },
+        ],
+    })
+    return message.content[0].txt
+} */
 
 const client = new InferenceClient(import.meta.env.VITE_HF_ACCESS_TOKEN)
 
 export async function getRecipeFromMistral(ingredientsArr) {
-    const ingredientsString = ingredientsArr.join(", ")
+    const ingredientsStr = ingredientsArr.join(", ")
     try {
         const response = await client.chatCompletion({
             model: "mistralai/Mistral-7B-Instruct-v0.2:featherless-ai",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
-                { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
+                { role: "user", content: `I have ${ingredientsStr}. Please give me a recipe you'd recommend I make!` },
             ],
             max_tokens: 1024,
         })

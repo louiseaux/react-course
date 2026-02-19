@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #F5F7FB;
+  color: #293264;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+header > h1 {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  font-size: 1.953125rem;
+}
+
+header > p {
+  margin: 7px 0 29px;
+}
+
+button {
+  font-family: inherit;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  border: none;
+  cursor: pointer;
+}
+
+header > button {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 15px;
+  width: 193px;
+  height: 52px;
+}
+
+.question-container {
+  padding: 0;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #DBDEF0;
+}
+
+.question-container .question {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.question-container label {
+  font-size: 0.64rem;
+  font-weight: 500;
+  color: #293264;
+  border: 1px solid #4D5B9E;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 12px 13px 15px 0;
+  padding: 5px 18px;
+  cursor: pointer;
+}
+
+.question-container label:has(input:checked) {
+  background-color: #D6DBF5;
+  border-color: #D6DBF5;
+}
+
+.question-container input[type="radio"] {
+  display: none;
+}
+
+form > button {
+  font-size: 0.64rem;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 120px;
+  height: 35px;
+}

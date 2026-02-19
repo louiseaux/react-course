@@ -83,4 +83,6 @@ form > button {
   border-radius: 10px;
   width: 120px;
   height: 35px;
+  display: block;
+  margin: 20px auto 0;
 }
